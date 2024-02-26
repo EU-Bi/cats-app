@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FC } from "react";
 interface CardProps {
   numberOfStyle: number;
@@ -19,7 +20,11 @@ const styles: { [key: number]: string } = {
 const Card: FC<CardProps> = ({ numberOfStyle }) => {
   const cardStyle = styles[numberOfStyle];
 
-  return <div className={cardStyle}>{numberOfStyle}</div>;
+  return (
+    <Link href={`breeds/${numberOfStyle}`} className={cardStyle}>
+      {numberOfStyle}
+    </Link>
+  );
 };
 
 export default Card;
