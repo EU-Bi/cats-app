@@ -1,6 +1,5 @@
 import Back from "@/app/components/Back";
 import NamePage from "@/app/components/NamePage";
-import Upload from "@/app/components/Upload";
 import Image from "next/image";
 import React from "react";
 import GridTemplate from "../breeds/GridTemplate";
@@ -22,7 +21,7 @@ const chunkArray = (arr: GridItem[], size: number): GridItem[][] => {
 function Gallery() {
   const chunkedArr: GridItem[][] = chunkArray(arr, 10);
   return (
-    <div className="Gallery">
+    <div className="Gallery relative">
       <div className="flex flex-col gap-2">
         <div className=" flex py-2 gap-[10px]">
           <Back />
@@ -82,7 +81,6 @@ function Gallery() {
           ))}
         </div>
       </div>
-      <Upload />
     </div>
   );
 }
