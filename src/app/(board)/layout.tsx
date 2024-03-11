@@ -13,7 +13,7 @@ function Layout({
       <div className="w-full overflow-y-auto rounded-[20px] bg-white h-full  p-5">
         {children}
       </div>
-      <Upload open={false}/>
+      <Upload open={true} />
     </aside>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Upload = (open: boolean) => {
+const Upload = ({ open }: { open: boolean }) => {
   return (
     <div
       className={
